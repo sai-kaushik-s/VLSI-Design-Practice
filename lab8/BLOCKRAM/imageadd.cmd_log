@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.xst" -ofn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.syr" 
+xst -intstyle ise -ifn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.xst" -ofn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.syr" 
+xst -intstyle ise -ifn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.xst" -ofn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.syr" 
+xst -intstyle ise -ifn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.xst" -ofn "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.syr" 

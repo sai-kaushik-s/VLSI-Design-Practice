@@ -1,0 +1,16 @@
+# Output products list for <blk_mem>
+blk_mem/blk_mem_gen_v7_3_readme.txt
+blk_mem/doc/blk_mem_gen_v7_3_vinfo.html
+blk_mem/doc/pg058-blk-mem-gen.pdf
+blk_mem.asy
+blk_mem.gise
+blk_mem.mif
+blk_mem.ngc
+blk_mem.sym
+blk_mem.v
+blk_mem.veo
+blk_mem.xco
+blk_mem.xise
+blk_mem_flist.txt
+blk_mem_xmdf.tcl
+summary.log

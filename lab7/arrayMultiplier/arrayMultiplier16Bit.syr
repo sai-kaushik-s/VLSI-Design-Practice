@@ -1,0 +1,401 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: arrayMultiplier16Bit.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "arrayMultiplier16Bit.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "arrayMultiplier16Bit"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-tqg144
+
+---- Source Options
+Top Module Name                    : arrayMultiplier16Bit
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/arrayMultiplier16Bit.v" into library work
+Parsing verilog file "arrayMultiplier8Bit.v" included at line 2.
+Parsing verilog file "arrayMultiplier4Bit.v" included at line 2.
+Parsing verilog file "arrayMultiplier2Bit.v" included at line 2.
+Parsing verilog file "halfAdder.v" included at line 2.
+Parsing module <halfAdder>.
+Parsing module <arrayMultiplier2Bit>.
+Parsing module <arrayMultiplier4Bit>.
+Parsing module <arrayMultiplier8Bit>.
+Parsing module <arrayMultiplier16Bit>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <arrayMultiplier16Bit>.
+
+Elaborating module <arrayMultiplier8Bit>.
+
+Elaborating module <arrayMultiplier4Bit>.
+
+Elaborating module <arrayMultiplier2Bit>.
+
+Elaborating module <halfAdder>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <arrayMultiplier16Bit>.
+    Related source file is "/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/arrayMultiplier16Bit.v".
+    Found 16-bit adder for signal <temp4> created at line 37.
+    Found 24-bit adder for signal <temp5> created at line 41.
+    Found 24-bit adder for signal <temp6> created at line 44.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <arrayMultiplier16Bit> synthesized.
+
+Synthesizing Unit <arrayMultiplier8Bit>.
+    Related source file is "/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/arrayMultiplier8Bit.v".
+    Found 8-bit adder for signal <temp4> created at line 37.
+    Found 12-bit adder for signal <temp5> created at line 41.
+    Found 12-bit adder for signal <temp6> created at line 44.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <arrayMultiplier8Bit> synthesized.
+
+Synthesizing Unit <arrayMultiplier4Bit>.
+    Related source file is "/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/arrayMultiplier4Bit.v".
+    Found 4-bit adder for signal <temp4> created at line 37.
+    Found 6-bit adder for signal <temp5> created at line 41.
+    Found 6-bit adder for signal <temp6> created at line 44.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+Unit <arrayMultiplier4Bit> synthesized.
+
+Synthesizing Unit <arrayMultiplier2Bit>.
+    Related source file is "/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/arrayMultiplier2Bit.v".
+    Summary:
+	no macro.
+Unit <arrayMultiplier2Bit> synthesized.
+
+Synthesizing Unit <halfAdder>.
+    Related source file is "/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/halfAdder.v".
+    Summary:
+Unit <halfAdder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 63
+ 12-bit adder                                          : 8
+ 16-bit adder                                          : 1
+ 24-bit adder                                          : 2
+ 4-bit adder                                           : 16
+ 6-bit adder                                           : 32
+ 8-bit adder                                           : 4
+# Xors                                                 : 128
+ 1-bit xor2                                            : 128
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 63
+ 12-bit adder                                          : 8
+ 16-bit adder                                          : 1
+ 24-bit adder                                          : 2
+ 4-bit adder                                           : 16
+ 6-bit adder                                           : 32
+ 8-bit adder                                           : 4
+# Xors                                                 : 128
+ 1-bit xor2                                            : 128
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <arrayMultiplier16Bit> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block arrayMultiplier16Bit, actual ratio is 33.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : arrayMultiplier16Bit.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 745
+#      GND                         : 1
+#      LUT1                        : 13
+#      LUT2                        : 71
+#      LUT3                        : 54
+#      LUT4                        : 128
+#      LUT5                        : 21
+#      LUT6                        : 227
+#      MUXCY                       : 110
+#      XORCY                       : 120
+# IO Buffers                       : 64
+#      IBUF                        : 32
+#      OBUF                        : 32
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  514  out of   2400    21%  
+    Number used as Logic:               514  out of   2400    21%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    514
+   Number with an unused Flip Flop:     514  out of    514   100%  
+   Number with an unused LUT:             0  out of    514     0%  
+   Number of fully used LUT-FF pairs:     0  out of    514     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          64
+ Number of bonded IOBs:                  64  out of    102    62%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 17.881ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 56887282 / 32
+-------------------------------------------------------------------------
+Delay:               17.881ns (Levels of Logic = 40)
+  Source:            B<0> (PAD)
+  Destination:       C<31> (PAD)
+
+  Data Path: B<0> to C<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            45   1.222   1.821  B_0_IBUF (AM8B1/temp1<0>_mand)
+     LUT6:I1->O            6   0.203   0.992  AM8B1/AM4B1/Madd_temp4_lut<1>1 (AM8B1/AM4B1/Madd_temp4_lut<1>)
+     LUT6:I2->O            3   0.203   0.651  AM8B1/AM4B1/Madd_temp4_xor<2>11 (AM8B1/AM4B1/temp4<2>)
+     LUT6:I5->O            2   0.205   0.981  AM8B1/AM4B1/Madd_temp6_lut<0>221 (AM8B1/AM4B1/Madd_temp6_lut<0>22)
+     LUT6:I0->O            2   0.203   0.981  AM8B1/AM4B1/Madd_temp6_cy<0>3 (AM8B1/AM4B1/Madd_temp6_cy<0>2)
+     LUT6:I0->O            2   0.203   0.961  AM8B1/AM4B1/Madd_temp6_cy<0>41 (AM8B1/AM4B1/Madd_temp6_cy<0>3)
+     LUT6:I1->O            1   0.203   0.000  AM8B1/Madd_temp4_lut<2> (AM8B1/Madd_temp4_lut<2>)
+     MUXCY:S->O            1   0.172   0.000  AM8B1/Madd_temp4_cy<2> (AM8B1/Madd_temp4_cy<2>)
+     XORCY:CI->O           2   0.180   0.617  AM8B1/Madd_temp4_xor<3> (AM8B1/temp4<3>)
+     LUT2:I1->O            1   0.205   0.580  AM8B1/Madd_temp63 (AM8B1/Madd_temp63)
+     LUT4:I3->O            1   0.205   0.000  AM8B1/Madd_temp6_lut<0>4 (AM8B1/Madd_temp6_lut<0>4)
+     XORCY:LI->O           1   0.136   0.808  AM8B1/Madd_temp6_xor<0>_3 (temp0<8>)
+     LUT3:I0->O            1   0.205   0.000  Madd_temp4_lut<0> (Madd_temp4_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Madd_temp4_cy<0> (Madd_temp4_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<1> (Madd_temp4_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<2> (Madd_temp4_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<3> (Madd_temp4_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<4> (Madd_temp4_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<5> (Madd_temp4_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<6> (Madd_temp4_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<7> (Madd_temp4_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<8> (Madd_temp4_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<9> (Madd_temp4_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<10> (Madd_temp4_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<11> (Madd_temp4_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<12> (Madd_temp4_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp4_cy<13> (Madd_temp4_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Madd_temp4_cy<14> (Madd_temp4_cy<14>)
+     XORCY:CI->O           2   0.180   0.617  Madd_temp4_xor<15> (temp4<15>)
+     LUT3:I2->O            1   0.205   0.684  Madd_temp615 (Madd_temp615)
+     LUT2:I0->O            1   0.203   0.000  Madd_temp6_lut<0>16 (Madd_temp6_lut<0>16)
+     MUXCY:S->O            1   0.172   0.000  Madd_temp6_cy<0>_15 (Madd_temp6_cy<0>16)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp6_cy<0>_16 (Madd_temp6_cy<0>17)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp6_cy<0>_17 (Madd_temp6_cy<0>18)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp6_cy<0>_18 (Madd_temp6_cy<0>19)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp6_cy<0>_19 (Madd_temp6_cy<0>20)
+     MUXCY:CI->O           1   0.019   0.000  Madd_temp6_cy<0>_20 (Madd_temp6_cy<0>21)
+     MUXCY:CI->O           0   0.019   0.000  Madd_temp6_cy<0>_21 (Madd_temp6_cy<0>22)
+     XORCY:CI->O           1   0.180   0.579  Madd_temp6_xor<0>_22 (C_31_OBUF)
+     OBUF:I->O                 2.571          C_31_OBUF (C<31>)
+    ----------------------------------------
+    Total                     17.881ns (7.608ns logic, 10.273ns route)
+                                       (42.5% logic, 57.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 11.46 secs
+ 
+--> 
+
+
+Total memory usage is 379744 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

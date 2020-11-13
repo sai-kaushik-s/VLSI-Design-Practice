@@ -1,0 +1,407 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: imageadd.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "imageadd.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "imageadd"
+Output Format                      : NGC
+Target Device                      : xc7vx330t-2-ffg1157
+
+---- Source Options
+Top Module Name                    : imageadd
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/thegamingbot/Downloads/BLOCKRAM/ipcore_dir/blk_mem.v" into library work
+Parsing module <blk_mem>.
+Analyzing Verilog file "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.v" into library work
+Parsing module <imageadd>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <imageadd>.
+
+Elaborating module <blk_mem>.
+WARNING:HDLCompiler:1499 - "/home/thegamingbot/Downloads/BLOCKRAM/ipcore_dir/blk_mem.v" Line 39: Empty module <blk_mem> remains a black box.
+WARNING:HDLCompiler:413 - "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.v" Line 40: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <imageadd>.
+    Related source file is "/home/thegamingbot/Downloads/BLOCKRAM/imageadd.v".
+    Found 6-bit register for signal <addr>.
+    Found 8-bit adder for signal <out1[7]_out2[7]_add_0_OUT> created at line 33.
+    Found 6-bit adder for signal <addr[5]_GND_1_o_add_3_OUT> created at line 40.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+Unit <imageadd> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 1
+ 6-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/blk_mem.ngc>.
+Loading core <blk_mem> for timing and area information for instance <b1>.
+Loading core <blk_mem> for timing and area information for instance <b2>.
+Loading core <blk_mem> for timing and area information for instance <b3>.
+
+Synthesizing (advanced) Unit <imageadd>.
+The following registers are absorbed into counter <addr>: 1 register on signal <addr>.
+Unit <imageadd> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <imageadd> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block imageadd, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 6
+ Flip-Flops                                            : 6
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : imageadd.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 38
+#      GND                         : 4
+#      INV                         : 2
+#      LUT2                        : 9
+#      LUT3                        : 1
+#      LUT4                        : 1
+#      LUT5                        : 1
+#      LUT6                        : 1
+#      MUXCY                       : 7
+#      VCC                         : 4
+#      XORCY                       : 8
+# FlipFlops/Latches                : 6
+#      FDR                         : 6
+# RAMS                             : 3
+#      RAMB18E1                    : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7vx330tffg1157-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               6  out of  408000     0%  
+ Number of Slice LUTs:                   15  out of  204000     0%  
+    Number used as Logic:                15  out of  204000     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     21
+   Number with an unused Flip Flop:      15  out of     21    71%  
+   Number with an unused LUT:             6  out of     21    28%  
+   Number of fully used LUT-FF pairs:     0  out of     21     0%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    600     1%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    750     0%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 9     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.711ns (Maximum Frequency: 269.447MHz)
+   Minimum input arrival time before clock: 1.024ns
+   Maximum output required time after clock: 2.139ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.711ns (frequency: 269.447MHz)
+  Total number of paths / destination ports: 157 / 50
+-------------------------------------------------------------------------
+Delay:               3.711ns (Levels of Logic = 10)
+  Source:            b1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Destination:       b3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: b1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram to b3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO0    1   1.800   0.405  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (douta<0>)
+     end scope: 'b1:douta<0>'
+     LUT2:I0->O            1   0.043   0.000  Madd_out1[7]_out2[7]_add_0_OUT_lut<0> (Madd_out1[7]_out2[7]_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  Madd_out1[7]_out2[7]_add_0_OUT_cy<0> (Madd_out1[7]_out2[7]_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_out1[7]_out2[7]_add_0_OUT_cy<1> (Madd_out1[7]_out2[7]_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_out1[7]_out2[7]_add_0_OUT_cy<2> (Madd_out1[7]_out2[7]_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_out1[7]_out2[7]_add_0_OUT_cy<3> (Madd_out1[7]_out2[7]_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_out1[7]_out2[7]_add_0_OUT_cy<4> (Madd_out1[7]_out2[7]_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  Madd_out1[7]_out2[7]_add_0_OUT_cy<5> (Madd_out1[7]_out2[7]_add_0_OUT_cy<5>)
+     MUXCY:CI->O           0   0.013   0.000  Madd_out1[7]_out2[7]_add_0_OUT_cy<6> (Madd_out1[7]_out2[7]_add_0_OUT_cy<6>)
+     XORCY:CI->O           1   0.262   0.339  Madd_out1[7]_out2[7]_add_0_OUT_xor<7> (out1[7]_out2[7]_add_0_OUT<7>)
+     begin scope: 'b3:dina<7>'
+     RAMB18E1:DIBDI9           0.543          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram
+    ----------------------------------------
+    Total                      3.711ns (2.967ns logic, 0.744ns route)
+                                       (79.9% logic, 20.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              1.024ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       addr_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to addr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.000   0.339  rst_IBUF (rst_IBUF)
+     INV:I->O              6   0.054   0.367  rst_inv1_INV_0 (rst_inv)
+     FDR:R                     0.264          addr_0
+    ----------------------------------------
+    Total                      1.024ns (0.318ns logic, 0.706ns route)
+                                       (31.0% logic, 69.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.139ns (Levels of Logic = 2)
+  Source:            b3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (RAM)
+  Destination:       out<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: b3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram to out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOBDO9    1   1.800   0.339  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram (douta<7>)
+     end scope: 'b3:douta<7>'
+     OBUF:I->O                 0.000          out_7_OBUF (out<7>)
+    ----------------------------------------
+    Total                      2.139ns (1.800ns logic, 0.339ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.711|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 10.67 secs
+ 
+--> 
+
+
+Total memory usage is 504264 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

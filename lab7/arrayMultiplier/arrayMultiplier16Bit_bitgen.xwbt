@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/arrayMultiplier16Bit.ncd
+OUTFILE=/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier/arrayMultiplier16Bit.bit
+FAMILY=Spartan6
+PART=xc6slx4-3tqg144
+WORKINGDIR=/home/thegamingbot/Downloads/sem-5/VLSI/lab7/arrayMultiplier
+LICENSE=WebPack
+USER_INFO=__0_0_0

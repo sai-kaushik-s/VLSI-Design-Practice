@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/impact.xsl
+OUTFILE=/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator
+LICENSE=iMPACT
+USER_INFO=iMPACT

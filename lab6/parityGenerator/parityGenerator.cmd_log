@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/parityGenerator.xst" -ofn "/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/parityGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 parityGenerator.ngc parityGenerator.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o parityGenerator_map.ncd parityGenerator.ngd parityGenerator.pcf 
+par -w -intstyle ise -ol high -mt off parityGenerator_map.ncd parityGenerator.ncd parityGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml parityGenerator.twx parityGenerator.ncd -o parityGenerator.twr parityGenerator.pcf 
+bitgen -intstyle ise -f parityGenerator.ut parityGenerator.ncd 
+xst -intstyle ise -ifn "/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/parityGenerator.xst" -ofn "/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/parityGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 parityGenerator.ngc parityGenerator.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o parityGenerator_map.ncd parityGenerator.ngd parityGenerator.pcf 
+par -w -intstyle ise -ol high -mt off parityGenerator_map.ncd parityGenerator.ncd parityGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml parityGenerator.twx parityGenerator.ncd -o parityGenerator.twr parityGenerator.pcf 
+bitgen -intstyle ise -f parityGenerator.ut parityGenerator.ncd 
+xst -intstyle ise -ifn "/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/parityGenerator.xst" -ofn "/home/thegamingbot/Downloads/sem-5/VLSI/lab6/parityGenerator/parityGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 parityGenerator.ngc parityGenerator.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o parityGenerator_map.ncd parityGenerator.ngd parityGenerator.pcf 
+par -w -intstyle ise -ol high -mt off parityGenerator_map.ncd parityGenerator.ncd parityGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml parityGenerator.twx parityGenerator.ncd -o parityGenerator.twr parityGenerator.pcf 
+bitgen -intstyle ise -f parityGenerator.ut parityGenerator.ncd 

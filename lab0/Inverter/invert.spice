@@ -1,0 +1,11 @@
+* SPICE3 file created from invert.ext - technology: scmos
+
+.option scale=1u
+
+M1000 vout vin gnd Gnd nfet w=4 l=2
++  ad=20 pd=18 as=20 ps=18
+M1001 vout vin vdd vdd pfet w=8 l=2
++  ad=72 pd=34 as=56 ps=30
+C0 gnd Gnd 3.38fF
+C1 vout Gnd 4.51fF
+C2 vin Gnd 7.06fF

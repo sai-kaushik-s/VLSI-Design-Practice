@@ -1,0 +1,84 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml parityGenerator.twx parityGenerator.ncd -o
+parityGenerator.twr parityGenerator.pcf
+
+Design file:              parityGenerator.ncd
+Physical constraint file: parityGenerator.pcf
+Device,package,speed:     xc6slx4,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |Even<0>        |    6.909|
+A<0>           |Even<8>        |    7.404|
+A<0>           |Odd<0>         |    6.909|
+A<0>           |Odd<8>         |    7.137|
+A<1>           |Even<1>        |    6.781|
+A<1>           |Even<8>        |    7.222|
+A<1>           |Odd<1>         |    6.474|
+A<1>           |Odd<8>         |    6.955|
+A<2>           |Even<2>        |    7.293|
+A<2>           |Even<8>        |    7.688|
+A<2>           |Odd<2>         |    7.068|
+A<2>           |Odd<8>         |    7.421|
+A<3>           |Even<3>        |    6.425|
+A<3>           |Even<8>        |    7.479|
+A<3>           |Odd<3>         |    6.398|
+A<3>           |Odd<8>         |    6.757|
+A<4>           |Even<4>        |    7.057|
+A<4>           |Even<8>        |    7.870|
+A<4>           |Odd<4>         |    6.873|
+A<4>           |Odd<8>         |    7.062|
+A<5>           |Even<5>        |    7.364|
+A<5>           |Even<8>        |    7.192|
+A<5>           |Odd<5>         |    6.498|
+A<5>           |Odd<8>         |    6.667|
+A<6>           |Even<6>        |    6.880|
+A<6>           |Even<8>        |    7.027|
+A<6>           |Odd<6>         |    6.264|
+A<6>           |Odd<8>         |    6.518|
+A<7>           |Even<7>        |    6.243|
+A<7>           |Even<8>        |    7.333|
+A<7>           |Odd<7>         |    5.802|
+A<7>           |Odd<8>         |    7.025|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Oct  7 17:55:44 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 362 MB
+
+
+
